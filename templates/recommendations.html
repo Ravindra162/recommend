@@ -8,10 +8,10 @@
     <div class="container">
         <div class="title">Recommended Movies</div>
         <div class="movie-list">
-            {% for name, poster in zip(movie_names, movie_posters) %}
+            {% for name in movie_names %}
             <div class="movie-item">
                 <p>{{ name }}</p>
-                <img src="{{ poster }}" alt="{{ name }}" width="150">
+                <!-- <img src="{{ poster }}" alt="{{ name }}" width="150"> -->
             </div>
             {% endfor %}
         </div>
