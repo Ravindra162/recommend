@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Recommender System</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="bg">
+        <div class="title">Movie Recommender System Using Machine Learning</div>
+        <form action="/recommend" method="post">
+            <label for="selected_movie">Type or select a movie from the dropdown:</label>
+            <select name="selected_movie" id="selected_movie">
+                {% for movie in movie_list %}
+                <option value="{{ movie }}">{{ movie }}</option>
+                {% endfor %}
+            </select>
+            <button class="btn" type="submit">Show Recommendation</button>
+        </form>
+    </div>
+</body>
+</html>

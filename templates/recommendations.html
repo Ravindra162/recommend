@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recommendations</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='recom.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="title">Recommended Movies</div>
+        <div class="movie-list">
+            {% for name, poster in zip(movie_names, movie_posters) %}
+            <div class="movie-item">
+                <p>{{ name }}</p>
+                <img src="{{ poster }}" alt="{{ name }}" width="150">
+            </div>
+            {% endfor %}
+        </div>
+        <div class="navigation">
+            <button onclick="goBack()">Go back</button>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+body {
+    color: azure;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex; /* Centers content vertically */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Ensures items are aligned in the center */
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("img.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(4px);
+    z-index: -1; /* Places the pseudo-element behind the content */
+}
+
+.bg {
+    text-align: center;
+    position: relative; /* Ensure it stays above the blurred background */
+    z-index: 1; /* Ensure it stays above the blurred background */
+}
+
+.title {
+    font-size: 3em; /* Adjust size as needed */
+    font-weight: bold; /* Makes the text bold */
+    padding-bottom: 20px;
+    padding-bottom: 10vh;
+    text-decoration: solid;
+}
+
+.btn{
+    border-radius: 50px;
+    padding: 10px;
+    background-color: grey;
+    color: white;
+}
+
+select{
+    border-radius: 5px;
+    padding: 7px;
+}
