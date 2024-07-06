@@ -44,6 +44,12 @@ body::before {
     padding: 10px;
     background-color: grey;
     color: white;
+    background-color: #007bff;
+}
+
+
+.btn:hover {
+    background-color: #0056b3;
 }
 
 select{
